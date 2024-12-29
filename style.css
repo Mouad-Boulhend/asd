@@ -1,0 +1,280 @@
+*{
+    padding: 0px; margin: 0px;
+    box-sizing: border-box;
+    font-family: Helvetica, sans-serif;
+}
+
+.header{
+    /* background-color: yellow; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+    border-bottom: 1px solid rgb(182, 182, 182);
+}
+
+.grop{
+    display: flex;
+    align-items: center;
+}
+
+.logo{
+    font-size: 40px;
+    font-weight: 700;
+    color: #0463fa;
+    margin-left: 55px;
+}
+
+.tab a{
+    text-decoration: none;
+    margin: 0px 18px;
+    font-weight: 600;
+    color: #6d6d6d;
+    font-size: 15px;
+    transition-duration: color;
+    transition-duration: 500ms;
+}
+
+.tab a:hover{
+    color: #0463fa;
+}
+
+#app{
+    background-color: #0463fa;
+    width: 30%;
+    height: 10vh;
+    text-align: center;
+
+}
+
+#app a{
+    color: rgb(255, 255, 255); position: relative; top: 4vh;
+}
+
+.body{
+    width: 85%;
+    margin: auto;
+    margin-top: 25px;
+    /* background-color: yellow; */
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn{
+    width: 120px; height: 30px;
+    text-align: center;
+    border-radius: 15px;
+    padding: 5px;
+    border: 1px solid gray;
+    color: gray;
+}
+
+
+
+.info{
+    /* background-color: red; */
+    width: 48%;
+    
+}
+
+.info h1{
+    font-size: 38px;
+}
+
+.info p{
+    margin-top: 25px;
+}
+
+.call{
+    margin-top: 20px;
+    background-color: #eff5ff;
+    border-radius: 8px;
+    display: flex;
+    height: 150px;
+    padding: 50px;
+}
+
+.mail{
+    margin-top: 20px;
+    background-color: #eff5ff;
+    border-radius: 8px;
+    display: flex;
+    height: 130px;
+    padding: 50px;
+}
+
+.callu{
+    color: gray;
+    font-size: 15px;
+}
+
+.info i{
+    background-color: rgb(255, 255, 255);
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border-radius: 25px;
+    padding: 17px;
+}
+
+.book{
+    background-color: #eff5ff;
+    width: 48%;
+    border-radius: 7px;
+    padding: 1px;
+}
+
+.lineup{
+    /* background-color: red; */
+    width: 85%;
+    margin: auto;
+    height: 70%;
+    position: relative;
+    top: 15%;
+    padding: 1px;
+
+}
+
+.input{
+    width: 48.5%;
+    margin: 6px;
+    height: 55px;
+    border: none;
+    border-radius: 5px;
+    padding-left: 10px;
+}
+
+.big_input{
+    width: 98%;
+    margin: 6px;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.space{
+    display: flex;
+    justify-content: space-between;
+}
+
+#submit{
+    width: 97%;
+    height: 55px;
+    background-color: #0463fa;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 17px;
+    position: relative;
+    left: 1.5%;
+}
+
+#submit:hover{
+    animation: spinner 0.2s;
+    animation-iteration-count: infinite;
+}
+
+
+.btn:hover{
+    position: relative;
+    left: 150px;
+}
+
+.info{
+    animation: fade_in_left 1s ease;
+}
+
+.book{
+    animation: fade_in_right 1s ease;
+
+}
+
+
+
+.info i:hover{
+    animation: inf_spinner 1s;
+}
+
+
+
+@keyframes spinner{
+    0% {
+        transform: rotate(0deg);
+    }
+    25%{
+        transform: rotate(1deg);
+    }
+    50%{
+        transform: rotate(0deg);
+    }
+    75%{
+        transform: rotate(-1deg);
+    }
+}
+
+@keyframes fade_in_left{
+    0%{
+        position: relative;
+        left: -500px;
+    }
+    100%{
+        position: relative;
+        left: 0px;
+    }
+}
+
+@keyframes fade_in_right{
+    0%{
+        position: relative;
+        right: -500px;
+    }
+    100%{
+        position: relative;
+        right: 0px;
+    }
+}
+
+@keyframes inf_spinner{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+
+
+
+@media (max-width: 463px) {
+    .header{
+        flex-direction: column;
+        height: auto;
+    }
+    .grop{
+        flex-direction: column;
+    }
+    #app{
+        width: 100%;
+        height: 50px;
+        margin-bottom: 10px;
+    }
+    #app a{
+        position: relative;
+        top: 15px;
+    }
+    .tab{
+        margin-top: 8px;
+    }
+    .body{
+        flex-direction: column;
+    }
+    .info{
+        width: 100%;
+    }
+    .book{
+        width: 100%;
+        margin-top: 15px;
+    }
+    
+}
